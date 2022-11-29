@@ -39,6 +39,20 @@ function Jugador(nombre)
         }
     }
     /*---------------------------------------------------------------- */
+    this.protegerse = function(jugadorObjetivo)
+    {
+        if(this.puntos>40)
+        {
+            this.puntos+=20;
+            this.estado(jugadorObjetivo);
+        }
+        else
+        {
+            this.puntos-=20;
+            console.error(this.nombre + "perdio puntos");
+        }
+    }
+    /*---------------------------------------------------------------- */
 };
 
 var jugador1 = new Jugador("gandalf");
